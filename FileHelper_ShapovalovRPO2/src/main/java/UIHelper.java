@@ -82,13 +82,13 @@ public class UIHelper {
 
         int globalFileNumber = 1; // сплошная нумерация только для файлов
 
-        printGroupWithGlobalNumbers("АРХИВЫ > 100 МБ", groups.get(0), globalFileNumber);
+        printGroupWithGlobalNumbers(" БОЛЬШИЕ АРХИВЫ (>100 МБ)", groups.get(0), globalFileNumber);
         globalFileNumber += groups.get(0).size();
 
-        printGroupWithGlobalNumbers("ФАЙЛЫ > 100 МБ", groups.get(1), globalFileNumber);
+        printGroupWithGlobalNumbers("БОЛЬШИЕ ФАЙЛЫ (> 100 МБ)", groups.get(1), globalFileNumber);
         globalFileNumber += groups.get(1).size();
 
-        printGroupWithGlobalNumbers("АРХИВЫ ≤ 100 МБ", groups.get(2), globalFileNumber);
+        printGroupWithGlobalNumbers("АРХИВЫ", groups.get(2), globalFileNumber);
         globalFileNumber += groups.get(2).size();
 
         printGroupWithGlobalNumbers("ОСТАЛЬНЫЕ ФАЙЛЫ И ПАПКИ", groups.get(3), globalFileNumber);
@@ -120,6 +120,5 @@ public class UIHelper {
         System.out.println("  99. Выход");
         printBorder("");
 
-        System.out.println("  (╯°□°)╯︵ ┻━┻");
     }
 }
